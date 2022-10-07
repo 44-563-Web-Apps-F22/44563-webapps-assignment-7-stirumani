@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <title>Treasure hunt by Tirumani ShivaniGoud</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"   
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" 
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    <style>
+        h1 {
+           color: #000000;
+           padding: 5px;
+           margin-bottom: 5px;
+           background-color:rgb(211, 211, 211);
+           text-shadow: 2px 2px rgb(21, 0, 128);
+        }
+        .chests {
+            background-color:yellowgreen;
+        }
+        .score {
+            background-color: mediumturquoise;
+        }
+        .help {
+            background-color: maroon;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 style="text-align:center">Treasure Hunt followed by Tirumani Shivani Goud</h1>
+    <div class="container display-6" style="text-align:center">
+        <p style="color:lavenderblush" style="text-align:center">Click on the chests to search for treasure</p>
+    </div>
+    <div class="container border bg-dark " style="padding-top: 10px; color: white;">
+        <p id="chests" style="text-align:center">Number of chests checked is zero.</p>
+    </div>
+    <div class="container border bg-warning " style="padding-top: 10px; color:lightcyan;">
+        <p id="score" style="text-align:center">Score is unknown.</p>
+    </div>
+    <div class="container border bg-success " style="padding-top: 10px; color:chocolate;">
+        <p id="help" style="text-align:center">Help report.</p>
+    </div><br>
+    <br>
+    <div class="container">
+        <div class="row" style="text-align:center;padding: 3px;">
+            <div class="col-sm-2" style="margin: 0px 15px;"><img src="treasure-chest-19.png" alt="Tchest" class="img-fluid" height="100" width="100"></div>
+            <div class="col-sm-2" style="margin: 0px 15px;"><img src="treasure-chest-19.png" alt="Tchest" class="img-fluid" height="100" width="100"></div>
+            <div class="col-sm-2" style="margin: 0px 15px;"><img src="treasure-chest-19.png" alt="Tchest" class="img-fluid" height="100" width="100"></div>
+            <div class="col-sm-2" style="margin: 0px 15px;"><img src="treasure-chest-19.png" alt="Tchest" class="img-fluid" height="100" width="100"></div>
+            <div class="col-sm-2" style="margin: 0px 15px;"><img src="treasure-chest-19.png" alt="Tchest" class="img-fluid" height="100" width="100"></div>
+        </div>
+
+        <div class="row" style="text-align:center; padding: 3px;">
+            <div class="col-sm-2" style="margin: 0px 15px;"><img src="treasure-chest-19.png" alt="Tchest" class="img-fluid" height="100" width="100"></div>
+            <div class="col-sm-2" style="margin: 0px 15px;"><img src="treasure-chest-19.png" alt="Tchest" class="img-fluid" height="100" width="100"></div>
+            <div class="col-sm-2" style="margin: 0px 15px;"><img src="treasure-chest-19.png"alt="Tchest" class="img-fluid" height="100" width="100"></div>
+            <div class="col-sm-2" style="margin: 0px 15px;"><img src="treasure-chest-19.png" alt="Tchest" class="img-fluid" height="100" width="100"></div>
+            <div class="col-sm-2" style="margin: 0px 15px;"><img src="treasure-chest-19.png" alt="Tchest" class="img-fluid" height="100" width="100"></div>
+        </div>
+
+        <div class="row" style="text-align:center;padding: 3px">
+            <div class="col-sm-2" style="margin: 0px 15px;"><img src="treasure-chest-19.png" alt="Tchest" class="img-fluid" height="100" width="100"></div>
+            <div class="col-sm-2" style="margin: 0px 15px;"><img src="treasure-chest-19.png" alt="Tchest" class="img-fluid" height="100" width="100"></div>
+            <div class="col-sm-2" style="margin: 12px 15px;"><img src="help.png" alt="help" class="img-fluid" height="100" width="100"></div>
+            <div class="col-sm-2" style="margin: 0px 15px;"><img src="treasure-chest-19.png" alt="Tchest" class="img-fluid" height="100" width="100"></div>
+            <div class="col-sm-2" style="margin: 0px 15px;"><img src="treasure-chest-19.png" alt="Tchest" class="img-fluid" height="100" width="100"></div>
+        </div>
+
+        <div class="row" style="text-align:center;padding: 3px">
+            <div class="col-sm-2" style="margin: 0px 15px;"><img src="Treasure Chest.jpg" alt="Tchest" class="img-fluid" height="100" width="100"></div>
+            <div class="col-sm-2" style="margin: 0px 15px;"><img src="Treasure Chest.jpg" alt="Tchest" class="img-fluid" height="100" width="100"></div>
+            <div class="col-sm-2" style="margin: 0px 15px;"><img src="Treasure Chest.jpg" alt="Tchest" class="img-fluid" height="100" width="100"></div>
+            <div class="col-sm-2" style="margin: 0px 15px;"><img src="Treasure Chest.jpg" alt="Tchest" class="img-fluid" height="100" width="100"></div>
+            <div class="col-sm-2" style="margin: 0px 15px;"><img src="Treasure Chest.jpg" alt="Tchest" class="img-fluid" height="100" width="100"></div>
+        </div>
+
+        <div class="row" style="text-align:center;padding: 3px">
+            <div class="col-sm-2" style="margin: 0px 15px;"><img src="Treasure Chest.jpg"alt="Tchest" class="img-fluid" height="100" width="100"></div>
+            <div class="col-sm-2" style="margin: 0px 15px;"><img src="Treasure Chest.jpg" alt="Tchest" class="img-fluid" height="100" width="100"></div>
+            <div class="col-sm-2" style="margin: 0px 15px;"><img src="Treasure Chest.jpg" alt="Tchest" class="img-fluid" height="100" width="100"></div>
+            <div class="col-sm-2" style="margin: 0px 15px;"><img src="Treasure Chest.jpg" alt="Tchest" class="img-fluid" height="100" width="100"></div>
+            <div class="col-sm-2" style="margin: 0px 15px;"><img src="Treasure Chest.jpg" alt="Tchest" class="img-fluid" height="100" width="100"></div>
+        </div>
+        <br>
+    </div>
+</div>
+
+
+</body>
+</html>
+Footer
