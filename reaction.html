@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> ShivaniGoud</title>
+  <title>reaction 
+    timer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    h1 {
+      color: #000000;
+       font-family: 'Times New Roman', Times, serif, Verdana, sans-serif;
+       font-weight: bold;
+       padding: 6px;
+       margin-bottom: 6px;
+       text-shadow: 3px 3px #f9fcfb;
+       
+    }
+    .menu {
+        background-color: #ff4b6371;
+        padding: 6px;
+        text-align: center;
+        width: 500px;
+         margin-left: 300px;
+    }
+    #target {
+        background-color: rgba(212, 0, 255, 0.941);
+        font-family: "fantasy";
+        font-weight: 800;
+        font-size: 18px;
+        margin: 6px;
+    }
+    #countdown {
+        background-color: rgb(21, 229, 21);
+        font-family: "fantasy";
+        font-weight: 800;
+        font-size: 18px;
+        margin: 6px;
+    }
+    button {
+        margin: 20px;
+    }
+</style>
+</head>
+
+<body>
+
+    <body style="background-color: #eaf6a8c8;"></body>
+    <!-- Part 5 -->
+    <div class="container text-center">
+        <h1 style="margin-bottom: 5px;margin-top: 10px;">Tirumani Shivani Goud Reaction Timer</h1>
+        <div class="row menu">
+            <div class="col-md">
+                <p id="target">Your time</p>
+            </div>
+            <div class="col-md">
+                <p id="countdown">Count</p>
+            </div>
+        </div>
+        <div class="container text-center">
+            <button class="btn btn-warning" type="submit" onclick="startTime()">Start Timer</button>
+            <button class="btn btn-danger" type="submit" onclick="JustReact()">React Now</button>
+        </div>
+    </div>
+    
+
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  
+    <script>
+        var myTime = Date.now()
+
+        function recordReact() {
+            myTime = Date.now()
+            console.log(myTime)
+        }
+
+    
+        function startTime() {
+            let countdown = Math.floor(Math.random() * 9) + 2
+            console.log()
+            for(let i = 0; i < countdown; i++) {
+                setTimeout(() => {
+                    document.getElementById("countdown").innerHTML = i
+                }, ((countdown-1-i)*1000));
+            }
+            setTimeout(() => {
+                if(myTime == undefined) {
+                    document.getElementById("Target").innerHTML = "Too Slow"
+                } else {
+                    let buttonTime = Date.now()
+                    document.getElementById("Target").innerHTML = "Time was " + (buttonTime - myTime)
+                }
+            }, 3000);
+        }
+    </script>
+
+</body>
+</html>

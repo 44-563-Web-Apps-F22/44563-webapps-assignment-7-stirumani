@@ -97,15 +97,15 @@
     var chestCount = 0
     var score = 0
     var lastCheck = 12
-    var treasureLocation = Math.floor(Math.random() * 24)
+    var treasureLocation = 18
 
     function check(position) {
         image = document.getElementById(ids[position])
         if(position == treasureLocation) {
-            image.src = "treasure-chest-19.png"
+            image.src = "treasure.png"
             score += 1 
         } else {
-            image.src = "empty-treasure-chest-.jpg"
+            image.src = "empty treasure chest.jpg"
         }
         chestCount += 1
         document.getElementById("chests").innerHTML = "Number of chests checked is " + chestCount;
@@ -119,7 +119,6 @@
         treasureLocation_row = parseInt(treasureLocation / 5)
         treasureLocation_column = parseInt(treasureLocation % 5)
         document.getElementById("score").innerHTML = "Score is " + score
-        score+=2
         if(lastCheck_row == treasureLocation_row) {
             if(lastCheck_column < treasureLocation_column) {
                 document.getElementById("help").innerHTML = "Right"
@@ -134,28 +133,33 @@
             } else if(lastCheck_row > treasureLocation_row) {
                 document.getElementById("help").innerHTML = "Up"
             } else {
-                document.getElementById("help").innerHTML = "Sorry, no help available"
+                document.getElementById("help").innerHTML = "Sorry, No help available"
             }
         } else {
-            document.getElementById("help").innerHTML = "Sorry, no help available"
+            document.getElementById("help").innerHTML = "Sorry, No help available"
         }
     }
-
-    function resetGame() {
-        treasureLocation = Math.floor(Math.random() * 24)
-        while(treasureLocation == 12) {
-            treasureLocation = Math.floor(Math.random() * 24)
-        }
-        chestCount = 0
-        score = 0
-        document.getElementById("chests").innerHTML = "Number of chests checked is zero"
-        document.getElementById("score").innerHTML = "Score is unknown"
-        for(let i = 0; i < 24; i++) {
-            if(i != 12) {
-                document.getElementById(ids[i]).src = "treasure-chest-19.png"
+                // Bonus One
+                function resetGame() {
+                treasureLocation = Math.floor(Math.random() * 24)
+                while(treasureLocation == 12) {
+                    treasureLocation = Math.floor(Math.random() * 24)
+                }
+                chestCount = 0
+                score = 0
+                document.getElementById("chests").innerHTML = "Number of chests checked is zero"
+                document.getElementById("score").innerHTML = "Score is unknown"
+                for(let i = 0; i < 24; i++) {
+                    if(i != 12) {
+                        document.getElementById(ids[i]).src = "treasure-chest-19.png"
+                    }
+                }
             }
-        }
-    }
+        </script>
+
+
+    
+</script>
 </script>
 </body>
 </html>
